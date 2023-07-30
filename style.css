@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #110303;
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    overflow: hidden;
+
+}
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.card{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color:#fff;
+    cursor: pointer;
+    flex: 0.8;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.card h3{
+    font-size: 22px;
+    position: absolute;
+    bottom: 20px;
+    right:30px;
+    padding-left: 20px;
+    margin: 0;
+    opacity: 0;
+    text-shadow: rgb(0, 0, 0) 2px 1px , #FC0 1px 0 10px;
+  
+}
+.card.active {
+    flex: 5;
+}
+.card.active h3 {
+    opacity: 1;
+    transition: opacity 0.5s ease-in 0.4s;
+}
+
+@media(max-width:500px){
+    .container{
+        width: 100vw;
+    }
+    .card:nth-of-type(4),
+    .card:nth-of-type(5){
+        display: none;
+    }
+    .card h3{
+        font-size: 13px;
+        position: relative;
+        text-align: center;
+        margin: 50px;
+    }
+}
+
+@media(min-width:1010px){
+    .container{
+        display: flex;
+        width: 80vw;
+    }
+    .card{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 70vh;
+        border-radius: 70px;
+        color:#fff;
+        flex: 0.8;
+        padding: 10px 100px;
+        margin: 20px;
+        position: relative;
+        transition: flex 0.7s ease-in;
+        background-size: cover; */
+        /* box-shadow: 20px 3px 10px rgba(226, 224, 224, 0.2);
+      } 
+
+}
